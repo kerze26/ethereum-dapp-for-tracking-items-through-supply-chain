@@ -1,0 +1,24 @@
+{
+  "name": "ethereum-dapp-for-tracking-items-through-supply-chain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "truffle compile",
+    "develop": "truffle develop",
+    "dev": "lite-server",
+    "migrate": "truffle migrate --reset",
+    "test": "truffle test",
+    "deploy": "truffle migrate --reset --network rinkeby",
+    "host": "ipfs add -r website"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "2.4.0"
+  },
+  "dependencies": {
+    "truffle-hdwallet-provider": "^1.0.16"
+  }
+}
