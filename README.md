@@ -7,7 +7,7 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 ## UML diagrams
 ![Activity Diagram](./uml_diagrams/activity_diagram.png)<br>
 ![Sequence Diagram](./uml_diagrams/sequence_diagram.png)<br>
-![State Diagram]<br>
+![State Diagram](./uml_diagrams/state_diagram.png)<br>
 ![Data Modelling]<br>
 
 ## Libraries
