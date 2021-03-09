@@ -5,8 +5,8 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 # Plan the project with write-ups
 
 ## UML diagrams
-[Activity Diagram]<br>
-[Sequence Diagram]<br>
+[Activity Diagram](./uml_diagram/activity_diagram.png)<br>
+[Sequence Diagram](./uml_diagram/sequence_diagram.png)<br>
 [State Diagram]<br>
 [Data Modelling]<br>
 
@@ -16,10 +16,6 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 ## IPFS
 
 # Deploy smart contracts on a public test network (Rinkeby)
-
-# Part 1: Plan the project with write-ups
-# Part 1: Plan the project with write-ups
-# Part 1: Plan the project with write-ups
 
 ## Acknowledgments
 
