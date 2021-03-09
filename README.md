@@ -5,10 +5,10 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 # Plan the project with write-ups
 
 ## UML diagrams
-[Activity Diagram](./uml_diagram/activity_diagram.png)<br>
-[Sequence Diagram](./uml_diagram/sequence_diagram.png)<br>
-[State Diagram]<br>
-[Data Modelling]<br>
+![Activity Diagram](./uml_diagrams/activity_diagram.png)<br>
+![Sequence Diagram](./uml_diagrams/sequence_diagram.png)<br>
+![State Diagram]<br>
+![Data Modelling]<br>
 
 ## Libraries
 **Truffle**: Used for developing, testing, and deploying my smart contracts
