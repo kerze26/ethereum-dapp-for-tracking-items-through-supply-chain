@@ -96,49 +96,49 @@ contract SupplyChain {
 
   // Define a modifier that checks if an item.state of a upc is Harvested
   modifier harvested(uint _upc) {
-    require(items[_upc].itemState == State.Harvested);
+    require(items[_upc].itemState == State.Harvested), "item is not harvested";
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Processed
   modifier processed(uint _upc) {
-    require(items[_upc].itemState == State.Processed);
+    require(items[_upc].itemState == State.Processed, "item is not processed");
     _;
   }
   
   // Define a modifier that checks if an item.state of a upc is Packed
   modifier packed(uint _upc) {
-    require(items[_upc].itemState == State.Packed);
+    require(items[_upc].itemState == State.Packed, "item is not packed");
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is ForSale
   modifier forSale(uint _upc) {
-    require(items[_upc].itemState == State.ForSale);
+    require(items[_upc].itemState == State.ForSale, "item is not for sale");
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Sold
   modifier sold(uint _upc) {
-    require(items[_upc].itemState == State.Sold);
+    require(items[_upc].itemState == State.Sold, "item is not sold");
     _;
   }
   
   // Define a modifier that checks if an item.state of a upc is Shipped
   modifier shipped(uint _upc) {
-    require(items[_upc].itemState == State.Shipped);
+    require(items[_upc].itemState == State.Shipped, "item is not shipped");
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Received
   modifier received(uint _upc) {
-    require(items[_upc].itemState == State.Received);
+    require(items[_upc].itemState == State.Received, "item is not received");
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Purchased
   modifier purchased(uint _upc) {
-    require(items[_upc].itemState == State.Purchased);
+    require(items[_upc].itemState == State.Purchased), "item is not purchased";
     _;
   }
 
