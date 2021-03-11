@@ -1,16 +1,16 @@
 pragma solidity ^0.4.24;
 
+import "../coffeecore/Ownable.sol";
 import "../coffeeaccesscontrol/ConsumerRole.sol";
 import "../coffeeaccesscontrol/DistributorRole.sol";
 import "../coffeeaccesscontrol/FarmerRole.sol";
 import "../coffeeaccesscontrol/RetailerRole.sol";
-import "../coffeecore/Ownable.sol";
 
 // Define a contract 'Supplychain'
-contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole, Ownable{
+contract SupplyChain is Ownable, ConsumerRole, DistributorRole, FarmerRole, RetailerRole{
 
   // Define 'owner'
-  address owner;
+  address public owner;
 
   // Define a variable called 'upc' for Universal Product Code (UPC)
   uint  upc;
@@ -97,7 +97,7 @@ contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole,
 
   // Define a modifier that checks if an item.state of a upc is Harvested
   modifier harvested(uint _upc) {
-    require(items[_upc].itemState == State.Harvested), "item is not harvested";
+    require(items[_upc].itemState == State.Harvested, "item is not harvested");
     _;
   }
 
@@ -139,7 +139,7 @@ contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole,
 
   // Define a modifier that checks if an item.state of a upc is Purchased
   modifier purchased(uint _upc) {
-    require(items[_upc].itemState == State.Purchased), "item is not purchased";
+    require(items[_upc].itemState == State.Purchased, "item is not purchased");
     _;
   }
 
@@ -209,7 +209,7 @@ contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole,
   // Define a function 'packItem' that allows a farmer to mark an item 'Packed'
   function packItem(uint _upc) public 
   // Call modifier to check if upc has passed previous supply chain stage
-  processed(_upc);
+  processed(_upc)
   // Call modifier to verify caller of this function
   onlyFarmer()
   {
