@@ -13,11 +13,11 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 ### Deploy smart contracts on a public test network (Rinkeby)
 | Contract Name | Contract Address|
 |:--------------|:----------------|
-|FarmerRole|0x91e8dcfB2d1a4Fca16796Ef33bC503Af6d3b4e67|
-|DistributorRole|0xD7f1e9a5D2300319a1905adc2AC953be7Cec7376|
-|RetailerRole|0x16ad6aED92D0b0a8ba5129924E5E082c5c8fbC03|
-|ConsumerRole|0x730F03a7b97C0397d0a469eBb6D8EeF30dddd652
-|SupplyChain|0x6210ad6c20a1F5D28F556A23B7e48C0B557bD354|
+|FarmerRole|https://rinkeby.etherscan.io/address/0x91e8dcfB2d1a4Fca16796Ef33bC503Af6d3b4e67|
+|DistributorRole|https://rinkeby.etherscan.io/address/0xD7f1e9a5D2300319a1905adc2AC953be7Cec7376|
+|RetailerRole|https://rinkeby.etherscan.io/address/0x16ad6aED92D0b0a8ba5129924E5E082c5c8fbC03|
+|ConsumerRole|https://rinkeby.etherscan.io/address/0x730F03a7b97C0397d0a469eBb6D8EeF30dddd652
+|SupplyChain|https://rinkeby.etherscan.io/address/0x6210ad6c20a1F5D28F556A23B7e48C0B557bD354|
 
 ### Installing
 Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
