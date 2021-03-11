@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity >=0.4.24;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -17,12 +17,11 @@ contract DistributorRole {
   // In the constructor make the address that deploys this contract the 1st distributor
   constructor() public {
     _addDistributor(msg.sender);
-
   }
 
   // Define a modifier that checks to see if msg.sender has the appropriate role
   modifier onlyDistributor() {
-    require(isDistributor(msg.sender));
+   require(isDistributor(msg.sender), "Caller is not a distributor.");
     _;
   }
 
