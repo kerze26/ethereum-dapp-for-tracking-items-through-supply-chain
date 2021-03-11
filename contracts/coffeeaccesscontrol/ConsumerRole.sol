@@ -1,4 +1,4 @@
-pragma solidity >=0.4.24;
+pragma solidity ^0.4.24;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -12,7 +12,7 @@ contract ConsumerRole {
   event ConsumerRemoved(address indexed account);
 
   // Define a struct 'consumers' by inheriting from 'Roles' library, struct Role
-  Roles.Role private consumers
+  Roles.Role private consumers;
 
   // In the constructor make the address that deploys this contract the 1st consumer
   constructor() public {
