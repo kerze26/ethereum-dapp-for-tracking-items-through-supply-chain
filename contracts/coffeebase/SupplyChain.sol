@@ -258,14 +258,14 @@ contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole{
   // Use the above modifers to check if the item is sold
   function shipItem(uint _upc) public 
     // Call modifier to check if upc has passed previous supply chain stage
-    
+    sold(_upc)
     // Call modifier to verify caller of this function
-    
+    onlyFarmer()
     {
     // Update the appropriate fields
-    
+    items[_upc].itemState = State.Shipped;
     // Emit the appropriate event
-    
+    emit Shipped(_upc); 
   }
 
   // Define a function 'receiveItem' that allows the retailer to mark an item 'Received'
