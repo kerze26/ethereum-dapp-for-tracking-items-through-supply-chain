@@ -1,4 +1,4 @@
-pragma solidity >=0.4.24;
+pragma solidity ^0.4.24;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -11,10 +11,8 @@ contract ConsumerRole {
   event ConsumerAdded(address indexed account);
   event ConsumerRemoved(address indexed account);
 
-
   // Define a struct 'consumers' by inheriting from 'Roles' library, struct Role
   Roles.Role private consumers;
-
 
   // In the constructor make the address that deploys this contract the 1st consumer
   constructor() public {
@@ -23,7 +21,7 @@ contract ConsumerRole {
 
   // Define a modifier that checks to see if msg.sender has the appropriate role
   modifier onlyConsumer() {
-    require(isConsumer(msg.sender), "Caller is not a consumer.");
+    require(isConsumer(msg.sender));
     _;
   }
 

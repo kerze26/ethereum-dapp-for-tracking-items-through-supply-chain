@@ -1,4 +1,4 @@
-pragma solidity >=0.4.24;
+pragma solidity ^0.4.24;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -14,7 +14,6 @@ contract RetailerRole {
   // Define a struct 'retailers' by inheriting from 'Roles' library, struct Role
   Roles.Role private retailers;
 
-
   // In the constructor make the address that deploys this contract the 1st retailer
   constructor() public {
     _addRetailer(msg.sender);
@@ -22,7 +21,7 @@ contract RetailerRole {
 
   // Define a modifier that checks to see if msg.sender has the appropriate role
   modifier onlyRetailer() {
-    require(isRetailer(msg.sender), "Caller is not a retailer.");
+    require(isRetailer(msg.sender));
     _;
   }
 
